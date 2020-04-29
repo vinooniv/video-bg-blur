@@ -1,0 +1,67 @@
+<html>
+  <header>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Live!</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+
+  </header>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Live!</h1>
+      </div>
+    </section>
+
+    <div class="py-5">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-6">
+            <center>
+              <div class="card mb-4 shadow-sm">
+                <center>
+                  <video id="video" width="480" height="320" autoplay playsinline></video>
+                </center>
+                <center>
+                  <canvas hidden id="canvas"></canvas>
+                </center>
+                <div class="card-body">
+                  <h5 class="card-title">Video Stream</h5>
+                  <p class="card-text">Start and Stop to play the live video stream. Toggle between blur and unblur to blur the background in the stream</p>
+                  <div class="justify-content-between align-items-center">
+                    <div class="btn-group btn-group-sm">
+                      <button id="start-btn" type="button" class="btn btn-sm btn-outline-success">Start</button>
+                      <button id="blur-btn" type="button" class="btn btn-sm btn-outline-secondary" disabled>Blur</button>
+                      <button id="unblur-btn" type="button" class="btn btn-sm btn-outline-secondary" hidden>Unblur</button>
+                      <button id="stop-btn" type="button" class="btn btn-sm btn-outline-danger" disabled>Stop</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </center>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/video.js"></script>
+</html>
