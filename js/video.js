@@ -96,7 +96,7 @@ async function perform(net) {
 
     const backgroundBlurAmount = 6;
     const edgeBlurAmount = 2;
-    const flipHorizontal = false;
+    const flipHorizontal = true;
 
     bodyPix.drawBokehEffect(
       canvas, videoElement, segmentation, backgroundBlurAmount,
